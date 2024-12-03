@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f1ff;
+    color: #333;
+}
+
+#homepage {
+    margin-top: 10%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 20px 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #6a0dad;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #8a2be2;
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+#calendar {
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.grid div {
+    width: 100px;
+    height: 100px;
+    background-color: #d9b3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.grid div:hover {
+    background-color: #bf80ff;
+    transform: scale(1.05);
+}
+
+.grid div.flipped {
+    background-color: #6a0dad;
+    color: white;
+    transform: rotateY(0deg);
+}
+
+@media (max-width: 600px) {
+    button {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+    .grid div {
+        width: 80px;
+        height: 80px;
+        font-size: 12px;
+    }
+}
